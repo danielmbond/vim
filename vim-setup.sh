@@ -52,8 +52,7 @@ mkdir -p ~/.vim/autoload/
 cd ~/.vim/autoload/
 #pythoncomplete
 #http://www.vim.org/scripts/script.php?script_id=1542
-wget http://www.vim.org/scripts/download_script.php?src_id=10872
-mv download_script.php\?src_id\=10872 pythoncomplete.vim
+wget -O pythoncomplete.vim http://www.vim.org/scripts/download_script.php?src_id=10872
 mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
 #https://github.com/vim-scripts/AutoComplPop
@@ -64,8 +63,7 @@ mkdir -p ~/.vim/doc/
 cd ~/.vim/doc/
 wget https://raw.githubusercontent.com/vim-scripts/AutoComplPop/master/doc/acp.txt
 cd ~
-wget "https://downloads.sourceforge.net/project/bicyclerepair/bicyclerepair/0.9/bicyclerepair-0.9.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fbicyclerepair%2Ffiles%2Fbicyclerepair%2F0.9%2F&ts=1486849212&use_mirror=superb-sea2"
-mv bicyclerepair-0.9.tar.gz* bicyclerepair-0.9.tar.gz
+wget -O bicyclerepair-0.9.tar.gz "https://downloads.sourceforge.net/project/bicyclerepair/bicyclerepair/0.9/bicyclerepair-0.9.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fbicyclerepair%2Ffiles%2Fbicyclerepair%2F0.9%2F&ts=1486849212&use_mirror=superb-sea2"
 tar xvf bicyclerepair-0.9.tar.gz
 cd ~/bicyclerepair-0.9
 sudo python setup.py install
@@ -74,6 +72,5 @@ cp ~/bicyclerepair-0.9/ide-integration/bike.vim ~/.vim/autoload/
 #http://www.vim.org/scripts/script.php?script_id=1643
 mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
-wget http://www.vim.org/scripts/download_script.php?src_id=21752
-mv download_script.php\?src_id\=21752 supertab.vmb
+wget -O supertab.vmb http://www.vim.org/scripts/download_script.php?src_id=21752
 vim ~/.vim/bundle/supertab.vmb
