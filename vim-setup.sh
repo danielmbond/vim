@@ -22,6 +22,7 @@ set smarttab
 set shiftwidth=4
 set tabstop=8
 set noexpandtab
+set backspace=indent,eol,start
 
 " the following line contains non-printable control character(s)
 ino # .^H#
