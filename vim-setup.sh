@@ -3,7 +3,6 @@ sudo sed -i 's|#https_proxy = http://proxy.yoyodyne.com:18023/|https_proxy = htt
 sudo sed -i 's|#http_proxy = http://proxy.yoyodyne.com:18023/|http_proxy = http://10.12.204.35:30000/|g' /etc/wgetrc
 sudo sed -i 's|#ftp_proxy = http://proxy.yoyodyne.com:18023/|ftp_proxy = http://10.12.204.35:30000/|g' /etc/wgetrc
 sudo sed -i 's/#use_proxy/use_proxy/g' /etc/wgetrc
-
 export http_proxy=http://10.12.204.35:30000
 export https_proxy=http://10.12.204.35:30000
 git config --global http.proxy $http_proxy
@@ -69,22 +68,22 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/doc/
 cd ~/.vim/autoload/
 #pythoncomplete
 #http://www.vim.org/scripts/script.php?script_id=1542
-curl -LSso  ~/.vim/autoload/pythoncomplete.vim http://www.vim.org/scripts/download_script.php?src_id=10872
+curl -Ss -o ~/.vim/autoload/pythoncomplete.vim -L http://www.vim.org/scripts/download_script.php?src_id=10872
 cd ~/.vim/bundle/
 #https://github.com/vim-scripts/AutoComplPop
 mkdir -p ~/.vim/autoload/
 cd ~/.vim/autoload/
-curl -LSso ~/.vim/bundle/acp.vim https://raw.githubusercontent.com/vim-scripts/AutoComplPop/master/autoload/acp.vim
+curl -Ss -o ~/.vim/bundle/acp.vim -L https://raw.githubusercontent.com/vim-scripts/AutoComplPop/master/autoload/acp.vim
 cd ~/.vim/doc/
-curl -LSso ~/.vim/doc/acp.txt https://raw.githubusercontent.com/vim-scripts/AutoComplPop/master/doc/acp.txt
+curl -Ss -o ~/.vim/doc/acp.txt -L https://raw.githubusercontent.com/vim-scripts/AutoComplPop/master/doc/acp.txt
 cd ~
-curl -LSso ~/bicyclerepair-0.9.tar.gz "https://downloads.sourceforge.net/project/bicyclerepair/bicyclerepair/0.9/bicyclerepair-0.9.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fbicyclerepair%2Ffiles%2Fbicyclerepair%2F0.9%2F&ts=1486849212&use_mirror=superb-sea2"
+curl -Ss -o ~/bicyclerepair-0.9.tar.gz -L "https://downloads.sourceforge.net/project/bicyclerepair/bicyclerepair/0.9/bicyclerepair-0.9.tar.gz?r=&ts=1487093325&use_mirror=superb-sea2"
 tar xvf bicyclerepair-0.9.tar.gz
 cd ~/bicyclerepair-0.9
 sudo python setup.py install
 cp ~/bicyclerepair-0.9/ide-integration/bike.vim ~/.vim/autoload/
 #Pathogen
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+curl -Ss -o ~/.vim/autoload/pathogen.vim -L https://tpo.pe/pathogen.vim
 #Syntastic
 cd ~/.vim/bundle && \
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
@@ -96,5 +95,5 @@ vim -u NONE -c "helptags vim-fugitive/doc" -c q
 #http://www.vim.org/scripts/script.php?script_id=1643
 mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
-curl -LSso ~/.vim/bundle/supertab.vmb http://www.vim.org/scripts/download_script.php?src_id=21752
+curl -Ss -o ~/.vim/bundle/supertab.vmb -L http://www.vim.org/scripts/download_script.php?src_id=21752
 vim ~/.vim/bundle/supertab.vmb
